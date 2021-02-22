@@ -1,0 +1,26 @@
+{
+    "name": "cyril-verloop/doctrine-entities",
+    "description": "Some default doctrine entity/fields requiring PHP 7.4+ and Doctrine 2.8.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CyrilVerloop\\DoctrineEntities\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CyrilVerloop\\DoctrineEntities\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "doctrine/orm": "^2.8"
+    },
+    "authors": [
+        {
+            "name": "Cyril VERLOOP",
+            "email": "cyril.verloop@webqard.fr"
+        }
+    ]
+}
