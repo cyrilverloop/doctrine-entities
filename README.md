@@ -45,7 +45,7 @@ There are both annotations and XML mappings. For XML mappings, read below.
 
 The XML file is located in the `config/doctrine/` directory.
 You just have to copy or reference it depending on your needs.
-If you use Symfony, the XML file just need to be referenced in the `resources/config/packages/doctrine.yaml` file :
+If you use Symfony, the XML file just needs to be referenced in the `resources/config/packages/doctrine.yaml` file :
 
 ```yaml
 doctrine:
