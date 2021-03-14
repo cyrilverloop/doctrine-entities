@@ -7,9 +7,9 @@ This includes :
 - `IntId` : an abstract class with an `$id` as an integer identifier/primary key;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
-- `ConnectedAt` : a trait that adds a `$connectedAt` \DateTime() field;
-- `CreatedAt` : a trait that adds a `$createdAt` \DateTime() field;
-- `UpdatedAt` : a trait that adds an `$updatedAt` \DateTime() field;
+- `ConnectedAt` : two traits that add a `$connectedAt` field (choose between \DateTime() or \DateTimeImmutable());
+- `CreatedAt` : two traits that add a `$createdAt` field (choose between \DateTime() or \DateTimeImmutable());
+- `UpdatedAt` : two traits that add a `$updatedAt` field (choose between \DateTime() or \DateTimeImmutable()).
 
 [![License](https://img.shields.io/github/license/cyrilverloop/doctrine-entities)](https://github.com/cyrilverloop/doctrine-entities/blob/trunk/LICENSE)
 [![Type coverage](https://shepherd.dev/github/cyrilverloop/doctrine-entities/coverage.svg)](https://shepherd.dev/github/cyrilverloop/doctrine-entities)
