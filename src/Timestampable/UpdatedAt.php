@@ -17,7 +17,7 @@ trait UpdatedAt
     /**
      * @var null|\DateTime the date and time of the update.
      *
-     * @ORM\Column(type="datetime", name="connected_at", nullable=true)
+     * @ORM\Column(type="datetime", name="updated_at", nullable=true)
      */
     protected ?\DateTime $updatedAt;
 
