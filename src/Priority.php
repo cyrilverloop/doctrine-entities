@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Column;
 
 /**
  * Trait that adds a 'priority' field to an entity.
@@ -17,8 +17,9 @@ trait Priority
     /**
      * @var int the priority.
      *
-     * @ORM\Column(type="integer")
+     * @Column(type="integer")
      */
+    #[Column(type: "integer")]
     protected int $priority;
 
 

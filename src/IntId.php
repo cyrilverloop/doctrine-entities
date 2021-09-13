@@ -4,15 +4,19 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\MappedSuperclass;
 
 /**
  * A base entity with an int
  * as identifier/primary key.
  * @package \CyrilVerloop\DoctrineEntities
  *
- * @ORM\MappedSuperclass
+ * @MappedSuperclass
  */
+#[MappedSuperclass]
 abstract class IntId
 {
     // Properties :
@@ -20,10 +24,18 @@ abstract class IntId
     /**
      * @var int the identifier/primary key.
      *
-     * @ORM\Id()
-     * @ORM\Column(type="integer", options={"unsigned":true})
-     * @ORM\GeneratedValue
+     * @Id
+     * @Column(type="integer", options={"unsigned":true})
+     * @GeneratedValue
      */
+    #[
+        Id,
+        Column(
+            type: "integer",
+            options: ["unsigned" => true]
+        ),
+        GeneratedValue(strategy: "AUTO")
+    ]
     protected int $id;
 
 

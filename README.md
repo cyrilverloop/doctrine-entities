@@ -1,6 +1,6 @@
 # doctrine-entities
 
-Some default doctrine entity/fields requiring PHP 7.4+ and Doctrine 2.8.
+Some default doctrine entity/fields requiring PHP 8+ and Doctrine 2.9+.
 
 This includes :
 
@@ -13,7 +13,7 @@ This includes :
 
 [![License](https://img.shields.io/github/license/cyrilverloop/doctrine-entities)](https://github.com/cyrilverloop/doctrine-entities/blob/trunk/LICENSE)
 [![Type coverage](https://shepherd.dev/github/cyrilverloop/doctrine-entities/coverage.svg)](https://shepherd.dev/github/cyrilverloop/doctrine-entities)
-[![Minimum PHP version](https://img.shields.io/badge/php-%3E%3D7.4-%23777BB4?logo=php&style=flat)](https://www.php.net/)
+[![Minimum PHP version](https://img.shields.io/badge/php-%3E%3D8-%23777BB4?logo=php&style=flat)](https://www.php.net/)
 
 
 ## Installation
@@ -39,7 +39,7 @@ user@host doctrine-entities$ phive install
 
 ## Mappings
 
-There are both annotations and XML mappings. For XML mappings, read below.
+There are annotations, attributes and XML mappings. For XML mappings, read below.
 
 ### Entity
 
