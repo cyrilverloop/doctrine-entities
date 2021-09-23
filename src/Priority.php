@@ -26,7 +26,7 @@ trait Priority
     // Accessors :
 
     /**
-     * Renvoie the priority.
+     * Returns the priority.
      * @return int the priority.
      */
     public function getPriority(): int
@@ -38,7 +38,7 @@ trait Priority
     // Mutators :
 
     /**
-     * Change the priority.
+     * Changes the priority.
      * @param int $priority the priority.
      * @return void
      */
