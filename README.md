@@ -7,6 +7,7 @@ This includes :
 - `IntId` : an abstract class with an `$id` as an integer identifier/primary key;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
+- `Slug` : a trait that adds a `$slug` string field;
 - `ConnectedAt` : two traits that add a `$connectedAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `CreatedAt` : two traits that add a `$createdAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `UpdatedAt` : two traits that add a `$updatedAt` field (choose between \DateTime() or \DateTimeImmutable()).
@@ -70,6 +71,7 @@ For example :
 <field name="updatedAt" column="updated_at" type="datetime" nullable="true" />
 <field name="available" column="available" type="boolean" />
 <field name="priority" column="priority" type="integer" />
+<field name="slug" column="slug" type="string" />
 ```
 
 You can also look at the `resources/mappings/Example.orm.xml` file.
@@ -96,7 +98,7 @@ class Product extends IntId
 }
 ```
 
-### Available / Priority / Timestampable ...
+### Available / Priority / Slug / Timestampable ...
 
 If your entities need some other fields, they can use a trait.
 

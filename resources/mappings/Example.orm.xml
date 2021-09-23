@@ -10,5 +10,6 @@
         <field name="updatedAt" column="updated_at" type="datetime" nullable="true" />
         <field name="available" column="available" type="boolean" />
         <field name="priority" column="priority" type="integer" />
+        <field name="slug" column="slug" type="string" />
     </entity>
 </doctrine-mapping>
