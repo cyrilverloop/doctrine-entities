@@ -22,5 +22,10 @@
             "name": "Cyril VERLOOP",
             "email": "cyril.verloop@webqard.fr"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    }
 }
