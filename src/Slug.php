@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping\Column;
 
 /**
  * Trait that adds a 'slug' field to an entity.
- * @package \CyrilVerloop\DoctrineEntities
  */
 trait Slug
 {
@@ -40,7 +39,6 @@ trait Slug
     /**
      * Changes the slug.
      * @param string $slug the slug.
-     * @return void
      */
     public function setSlug(string $slug): void
     {

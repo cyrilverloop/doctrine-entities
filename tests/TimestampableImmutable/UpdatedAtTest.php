@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the UpdatedAt trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\UpdatedAt
  */
@@ -19,7 +18,6 @@ class UpdatedAtTest extends TestCase
 
     /**
      * Test that the update date and time can be accessed.
-     * @return void
      *
      * @covers ::setUpdatedAt
      * @covers ::getUpdatedAt

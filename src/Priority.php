@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping\Column;
 
 /**
  * Trait that adds a 'priority' field to an entity.
- * @package \CyrilVerloop\DoctrineEntities
  */
 trait Priority
 {
@@ -40,7 +39,6 @@ trait Priority
     /**
      * Changes the priority.
      * @param int $priority the priority.
-     * @return void
      */
     public function setPriority(int $priority): void
     {

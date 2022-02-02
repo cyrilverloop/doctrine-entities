@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the CreatedAt trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\CreatedAt
  */
@@ -19,7 +18,6 @@ class CreatedAtTest extends TestCase
 
     /**
      * Test that the creation date and time can be accessed.
-     * @return void
      *
      * @covers ::setCreatedAt
      * @covers ::getCreatedAt

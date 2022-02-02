@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds an 'updated_at' field to an entity.
- * @package \CyrilVerloop\DoctrineEntities\TimestampableImmutable
  */
 trait UpdatedAt
 {
@@ -40,7 +39,6 @@ trait UpdatedAt
     /**
      * Changes the date and time of the update.
      * @param \DateTimeImmutable $updatedAt the date and time of the update.
-     * @return void
      */
     public function setUpdatedAt(\DateTimeImmutable $updatedAt): void
     {

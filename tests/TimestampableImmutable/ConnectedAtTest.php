@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the ConnectedAt trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\ConnectedAt
  */
@@ -19,7 +18,6 @@ class ConnectedAtTest extends TestCase
 
     /**
      * Test that the connection date and time can be accessed.
-     * @return void
      *
      * @covers ::setConnectedAt
      * @covers ::getConnectedAt

@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the IntId abstract entity.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\IntId
  * @covers ::__construct

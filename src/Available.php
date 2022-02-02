@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping\Column;
 
 /**
  * Trait that adds an 'available' field to an entity.
- * @package \CyrilVerloop\DoctrineEntities
  */
 trait Available
 {
@@ -40,7 +39,6 @@ trait Available
     /**
      * Changes the availability.
      * @param bool $available the availability.
-     * @return void
      */
     public function setAvailable(bool $available): void
     {

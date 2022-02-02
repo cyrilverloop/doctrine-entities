@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the TimestampableImmutable trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable
  */
@@ -19,7 +18,6 @@ class TimestampableImmutableTest extends TestCase
 
     /**
      * Test that the creation date and time can be accessed.
-     * @return void
      *
      * @covers ::setCreatedAt
      * @covers ::getCreatedAt
@@ -40,7 +38,6 @@ class TimestampableImmutableTest extends TestCase
 
     /**
      * Test that the update date and time can be accessed.
-     * @return void
      *
      * @covers ::setUpdatedAt
      * @covers ::getUpdatedAt

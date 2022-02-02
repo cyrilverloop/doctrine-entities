@@ -12,7 +12,6 @@ use Doctrine\ORM\Mapping\MappedSuperclass;
 /**
  * A base entity with an int
  * as identifier/primary key.
- * @package \CyrilVerloop\DoctrineEntities
  *
  * @MappedSuperclass
  */

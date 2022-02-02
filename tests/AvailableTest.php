@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Available trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Available
  */
@@ -32,7 +31,6 @@ class AvailableTest extends TestCase
     /**
      * Test that the availability can be accessed.
      * @param bool $available the availability.
-     * @return void
      *
      * @covers ::setAvailable
      * @covers ::isAvailable

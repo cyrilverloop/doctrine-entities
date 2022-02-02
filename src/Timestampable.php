@@ -9,7 +9,6 @@ use CyrilVerloop\DoctrineEntities\Timestampable\UpdatedAt;
 
 /**
  * Trait that adds a 'created_at' and an 'updated_at' fields to an entity.
- * @package \CyrilVerloop\DoctrineEntities
  */
 trait Timestampable
 {

@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Slug trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Slug
  */
@@ -19,7 +18,6 @@ class SlugTest extends TestCase
 
     /**
      * Tests slug can be accessed.
-     * @return void
      *
      * @covers ::setSlug
      * @covers ::getSlug

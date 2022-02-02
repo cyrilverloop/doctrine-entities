@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds a 'connected_at' field to an entity.
- * @package \CyrilVerloop\DoctrineEntities\TimestampableImmutable
  */
 trait ConnectedAt
 {
@@ -40,7 +39,6 @@ trait ConnectedAt
     /**
      * Changes the date and time of the connection
      * @param \DateTimeImmutable $connectedAt the date and time of the connection
-     * @return void
      */
     public function setConnectedAt(\DateTimeImmutable $connectedAt): void
     {

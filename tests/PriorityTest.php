@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Priority trait.
- * @package \CyrilVerloop\DoctrineEntities\Tests
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Priority
  */
@@ -19,7 +18,6 @@ class PriorityTest extends TestCase
 
     /**
      * Tests priority can be accessed.
-     * @return void
      *
      * @covers ::setPriority
      * @covers ::getPriority
