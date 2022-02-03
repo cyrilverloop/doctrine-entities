@@ -118,3 +118,17 @@ class Product
     // Your code here.
 }
 ```
+
+
+## PHPDoc
+
+You can install phpDocumentor through Phive :
+```shellsession
+user@host symfony-demo$ phive install
+```
+
+To generate the PHPDoc :
+```shellsession
+user@host symfony-demo$ ./tools/phpDocumentor --config ./build/phpdoc.xml
+```
+The generated HTML documentation will be in `./build/phpdoc/`.
