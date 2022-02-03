@@ -14,7 +14,7 @@ trait Available
     // Properties :
 
     /**
-     * @var boolean true if available, else false.
+     * @var bool true if available, else false.
      *
      * @Column(type="boolean")
      */
