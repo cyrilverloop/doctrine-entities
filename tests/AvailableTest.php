@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Available
  */
-class AvailableTest extends TestCase
+final class AvailableTest extends TestCase
 {
     // Methods :
 

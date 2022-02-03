@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Timestampable
  */
-class TimestampableTest extends TestCase
+final class TimestampableTest extends TestCase
 {
     // Methods :
 

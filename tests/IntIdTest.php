@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\IntId
  * @covers ::__construct
  */
-class IntIdTest extends TestCase
+final class IntIdTest extends TestCase
 {
     // Methods :
 

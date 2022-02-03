@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Slug
  */
-class SlugTest extends TestCase
+final class SlugTest extends TestCase
 {
     // Methods :
 

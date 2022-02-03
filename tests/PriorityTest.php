@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Priority
  */
-class PriorityTest extends TestCase
+final class PriorityTest extends TestCase
 {
     // Methods :
 
