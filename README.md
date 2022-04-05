@@ -124,11 +124,11 @@ class Product
 
 You can install phpDocumentor through Phive :
 ```shellsession
-user@host symfony-demo$ phive install
+user@host doctrine-entities$ phive install
 ```
 
 To generate the PHPDoc :
 ```shellsession
-user@host symfony-demo$ ./tools/phpDocumentor --config ./ci/phpdoc.xml
+user@host doctrine-entities$ ./tools/phpDocumentor --config ./ci/phpdoc.xml
 ```
 The generated HTML documentation will be in `./ci/phpdoc/`.
