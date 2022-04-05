@@ -120,15 +120,32 @@ class Product
 ```
 
 
-## PHPDoc
+## Development
 
-You can install phpDocumentor through Phive :
+You can install development tools through Phive :
 ```shellsession
 user@host doctrine-entities$ phive install
 ```
 
+## PHPUnit
+
+To execute tests :
+```shellsession
+user@host doctrine-entities$ ./tools/phpunit -c ./ci/phpunit.xml
+```
+The generated coverage report will be in `./ci/phpunit/`.
+
+## Psalm
+
+To verify the code with Psalm :
+```shellsession
+user@host doctrine-entities$ ./tools/psalm -c ./ci/psalm.xml
+```
+
+## PHPDoc
+
 To generate the PHPDoc :
 ```shellsession
-user@host doctrine-entities$ ./tools/phpDocumentor --config ./ci/phpdoc.xml
+user@host doctrine-entities$ ./tools/phpdocumentor --config ./ci/phpdoc.xml
 ```
 The generated HTML documentation will be in `./ci/phpdoc/`.
