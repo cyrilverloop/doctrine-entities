@@ -26,6 +26,6 @@ final class IntIdTest extends TestCase
     {
         $intId = $this->getMockForAbstractClass(IntId::class);
 
-        self::assertSame(-1, $intId->getId(), 'The IDs must be the same.');
+        self::assertSame(null, $intId->getId(), 'The IDs must be the same.');
     }
 }

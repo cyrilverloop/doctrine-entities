@@ -21,7 +21,7 @@ abstract class IntId
     // Properties :
 
     /**
-     * @var int the identifier/primary key.
+     * @var null|int the identifier/primary key.
      *
      * @Id
      * @Column(type="integer", options={"unsigned":true})
@@ -35,7 +35,7 @@ abstract class IntId
         ),
         GeneratedValue(strategy: "AUTO")
     ]
-    protected int $id;
+    protected ?int $id;
 
 
     // Magic methods :
@@ -45,7 +45,7 @@ abstract class IntId
      */
     public function __construct()
     {
-        $this->id = -1;
+        $this->id = null;
     }
 
 
@@ -53,9 +53,9 @@ abstract class IntId
 
     /**
      * Returns the identifier/primary key.
-     * @return int the identifier/primary key.
+     * @return null|int the identifier/primary key.
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
