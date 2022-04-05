@@ -129,6 +129,6 @@ user@host symfony-demo$ phive install
 
 To generate the PHPDoc :
 ```shellsession
-user@host symfony-demo$ ./tools/phpDocumentor --config ./build/phpdoc.xml
+user@host symfony-demo$ ./tools/phpDocumentor --config ./ci/phpdoc.xml
 ```
-The generated HTML documentation will be in `./build/phpdoc/`.
+The generated HTML documentation will be in `./ci/phpdoc/`.

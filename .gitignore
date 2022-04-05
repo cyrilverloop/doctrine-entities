@@ -1,5 +1,5 @@
-/build/cache/
-/build/phpdoc/
-/build/phpunit/
+/ci/cache/
+/ci/phpdoc/
+/ci/phpunit/
 /tools/
 /vendor/
