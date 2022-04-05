@@ -15,10 +15,6 @@
 
     <version number="latest">
         <api>
-            <ignore>
-                <path>../src/Kernel.php</path>
-            </ignore>
-
             <source dsn="../">
                 <path>src/</path>
             </source>
