@@ -1,6 +1,6 @@
 # doctrine-entities
 
-Some default doctrine entity/fields requiring PHP 8+ and Doctrine 2.9+.
+Some default doctrine entity/fields requiring PHP 8.1+ and Doctrine 2.11+.
 
 This includes :
 
@@ -14,7 +14,7 @@ This includes :
 
 [![License](https://img.shields.io/github/license/cyrilverloop/doctrine-entities)](https://github.com/cyrilverloop/doctrine-entities/blob/trunk/LICENSE)
 [![Type coverage](https://shepherd.dev/github/cyrilverloop/doctrine-entities/coverage.svg)](https://shepherd.dev/github/cyrilverloop/doctrine-entities)
-[![Minimum PHP version](https://img.shields.io/badge/php-%3E%3D8-%23777BB4?logo=php&style=flat)](https://www.php.net/)
+[![Minimum PHP version](https://img.shields.io/badge/php-%3E%3D8.1-%23777BB4?logo=php&style=flat))](https://www.php.net/)
 
 
 ## Installation
