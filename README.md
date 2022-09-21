@@ -70,7 +70,11 @@ For example :
 <field name="createdAt" column="created_at" type="datetime" />
 <field name="updatedAt" column="updated_at" type="datetime" nullable="true" />
 <field name="available" column="available" type="boolean" />
-<field name="priority" column="priority" type="integer" />
+<field name="priority" column="priority" type="smallint">
+    <options>
+        <option name="default">0</option>
+    </options>
+</field>
 <field name="slug" column="slug" type="string" />
 ```
 
