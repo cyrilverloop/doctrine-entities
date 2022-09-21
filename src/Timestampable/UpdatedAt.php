@@ -19,7 +19,7 @@ trait UpdatedAt
      * @ORM\Column(type="datetime", name="updated_at", nullable=true)
      */
     #[Column(type: "datetime", name: "updated_at", nullable: true)]
-    protected ?\DateTime $updatedAt;
+    private ?\DateTime $updatedAt;
 
 
     // Accessors :

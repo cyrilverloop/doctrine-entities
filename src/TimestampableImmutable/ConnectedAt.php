@@ -19,7 +19,7 @@ trait ConnectedAt
      * @ORM\Column(type="datetime", name="connected_at", nullable=true)
      */
     #[Column(type: "datetime", name: "connected_at", nullable: true)]
-    protected ?\DateTimeImmutable $connectedAt;
+    private ?\DateTimeImmutable $connectedAt;
 
 
     // Accessors :

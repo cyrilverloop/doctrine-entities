@@ -35,7 +35,7 @@ abstract class IntId
         ),
         GeneratedValue(strategy: "AUTO")
     ]
-    protected ?int $id;
+    private ?int $id;
 
 
     // Magic methods :

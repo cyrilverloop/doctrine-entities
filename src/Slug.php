@@ -19,7 +19,7 @@ trait Slug
      * @Column(type="string")
      */
     #[Column(type: "string")]
-    protected string $slug;
+    private string $slug;
 
 
     // Accessors :

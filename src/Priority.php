@@ -31,7 +31,7 @@ trait Priority
             ]
         )
     ]
-    protected int $priority;
+    private int $priority;
 
 
     // Accessors :
