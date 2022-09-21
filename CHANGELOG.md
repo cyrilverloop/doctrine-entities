@@ -5,13 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### changed
+### Changed
 - Minimum requirement Doctrine ORM 2.13.
 - Doctrine XSD URLs for XML mapping.
 - `priority` is now a small int with a default value of 0.
 
 ## [4.0.0] - 2022-05-28
-### changed
+### Changed
 - Minimum requirement PHP 8.1.
 - Minimum requirement Doctrine ORM 2.11.
 
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpDocumentor.
 - Documentation for development.
 
-### changed
+### Changed
 - The "id" property of IntId is initialised to null instead of -1.
 - "build" directory to "ci".
 
