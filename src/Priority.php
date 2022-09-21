@@ -16,9 +16,21 @@ trait Priority
     /**
      * @var int the priority.
      *
-     * @Column(type="integer")
+     * @Column(
+     *     type="smallint",
+     *     options={
+     *         "default": 0
+     *     }
+     * )
      */
-    #[Column(type: "integer")]
+    #[
+        Column(
+            type: "smallint",
+            options: [
+                "default" => 0
+            ]
+        )
+    ]
     protected int $priority;
 
 
