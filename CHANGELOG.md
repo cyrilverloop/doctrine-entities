@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### changed
 - Minimum requirement Doctrine ORM 2.13.
+- Doctrine XSD URLs for XML mapping.
 
 ## [4.0.0] - 2022-05-28
 ### changed
