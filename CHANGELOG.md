@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Namespace for Doctrine attributes in `ConnectedAt`, `CreatedAt` and `UpdatedAt`.
+- `createdAt` was nullable in attributes.
 
 ## [5.0.1] - 2022-09-22
 ### Fixed

@@ -18,7 +18,7 @@ trait CreatedAt
      *
      * @ORM\Column(type="datetime", name="created_at")
      */
-    #[ORM\Column(type: "datetime", name: "created_at", nullable: true)]
+    #[ORM\Column(type: "datetime", name: "created_at")]
     protected \DateTime $createdAt;
 
 
