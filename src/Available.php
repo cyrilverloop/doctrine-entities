@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
-use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds an 'available' field to an entity.
@@ -16,9 +16,9 @@ trait Available
     /**
      * @var bool true if available, else false.
      *
-     * @Column(type="boolean")
+     * @ORM\Column(type="boolean")
      */
-    #[Column(type: "boolean")]
+    #[ORM\Column(type: "boolean")]
     protected bool $available;
 
 

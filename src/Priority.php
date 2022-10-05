@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
-use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds a 'priority' field to an entity.
@@ -16,7 +16,7 @@ trait Priority
     /**
      * @var int the priority.
      *
-     * @Column(
+     * @ORM\Column(
      *     type="smallint",
      *     options={
      *         "default": 0
@@ -24,7 +24,7 @@ trait Priority
      * )
      */
     #[
-        Column(
+        ORM\Column(
             type: "smallint",
             options: [
                 "default" => 0

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
-use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds a 'slug' field to an entity.
@@ -16,9 +16,9 @@ trait Slug
     /**
      * @var null|string the slug.
      *
-     * @Column(type="string", nullable=true)
+     * @ORM\Column(type="string", nullable=true)
      */
-    #[Column(type: "string", nullable: true)]
+    #[ORM\Column(type: "string", nullable: true)]
     protected ?string $slug;
 
 
