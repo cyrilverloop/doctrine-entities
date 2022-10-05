@@ -19,7 +19,7 @@ trait Available
      * @Column(type="boolean")
      */
     #[Column(type: "boolean")]
-    private bool $available;
+    protected bool $available;
 
 
     // Accessors :

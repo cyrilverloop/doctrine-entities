@@ -19,7 +19,7 @@ trait CreatedAt
      * @ORM\Column(type="datetime", name="created_at")
      */
     #[Column(type: "datetime", name: "created_at", nullable: true)]
-    private \DateTimeImmutable $createdAt;
+    protected \DateTimeImmutable $createdAt;
 
 
     // Accessors :
