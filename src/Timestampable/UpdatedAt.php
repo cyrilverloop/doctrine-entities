@@ -38,9 +38,9 @@ trait UpdatedAt
 
     /**
      * Changes the date and time of the update.
-     * @param \DateTime $updatedAt the date and time of the update.
+     * @param null|\DateTime $updatedAt the date and time of the update.
      */
-    public function setUpdatedAt(\DateTime $updatedAt): void
+    public function setUpdatedAt(?\DateTime $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }

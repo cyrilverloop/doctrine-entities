@@ -38,9 +38,9 @@ trait ConnectedAt
 
     /**
      * Changes the date and time of the connection
-     * @param \DateTime $connectedAt the date and time of the connection
+     * @param null|\DateTime $connectedAt the date and time of the connection
      */
-    public function setConnectedAt(\DateTime $connectedAt): void
+    public function setConnectedAt(?\DateTime $connectedAt): void
     {
         $this->connectedAt = $connectedAt;
     }
