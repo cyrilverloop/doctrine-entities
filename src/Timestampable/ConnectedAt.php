@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities\Timestampable;
 
-use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Trait that adds a 'connected_at' field to an entity.
@@ -18,7 +18,7 @@ trait ConnectedAt
      *
      * @ORM\Column(type="datetime", name="connected_at", nullable=true)
      */
-    #[Column(type: "datetime", name: "connected_at", nullable: true)]
+    #[ORM\Column(type: "datetime", name: "connected_at", nullable: true)]
     protected ?\DateTime $connectedAt;
 
 

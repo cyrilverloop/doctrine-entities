@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Properties are back to protected.
 - `slug` is now a nullable.
 
+### Fixed
+- Namespace for Doctrine attributes in `ConnectedAt`, `CreatedAt` and `UpdatedAt`.
+
 ## [5.0.1] - 2022-09-22
 ### Fixed
 - `id` property must stay protected.
