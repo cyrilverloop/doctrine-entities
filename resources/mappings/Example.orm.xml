@@ -14,6 +14,6 @@
                 <option name="default">0</option>
             </options>
         </field>
-        <field name="slug" column="slug" type="string" />
+        <field name="slug" column="slug" type="string" nullable="true" />
     </entity>
 </doctrine-mapping>

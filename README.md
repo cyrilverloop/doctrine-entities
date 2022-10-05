@@ -75,7 +75,7 @@ For example :
         <option name="default">0</option>
     </options>
 </field>
-<field name="slug" column="slug" type="string" />
+<field name="slug" column="slug" type="string" nullable="true" />
 ```
 
 You can also look at the `resources/mappings/Example.orm.xml` file.

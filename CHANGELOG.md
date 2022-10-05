@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Properties are back to protected.
+- `slug` is now a nullable.
 
 ## [5.0.1] - 2022-09-22
 ### Fixed

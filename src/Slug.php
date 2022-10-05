@@ -14,21 +14,21 @@ trait Slug
     // Properties :
 
     /**
-     * @var string the slug.
+     * @var null|string the slug.
      *
-     * @Column(type="string")
+     * @Column(type="string", nullable=true)
      */
-    #[Column(type: "string")]
-    protected string $slug;
+    #[Column(type: "string", nullable: true)]
+    protected ?string $slug;
 
 
     // Accessors :
 
     /**
      * Returns the slug.
-     * @return string the slug.
+     * @return null|string the slug.
      */
-    public function getSlug(): string
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
@@ -38,9 +38,9 @@ trait Slug
 
     /**
      * Changes the slug.
-     * @param string $slug the slug.
+     * @param null|string $slug the slug.
      */
-    public function setSlug(string $slug): void
+    public function setSlug(?string $slug): void
     {
         $this->slug = $slug;
     }
