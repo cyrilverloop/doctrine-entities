@@ -1,5 +1,6 @@
 /ci/cache/
 /ci/phpdoc/
 /ci/phpunit/
+/ci/psalm/
 /tools/
 /vendor/
