@@ -153,3 +153,12 @@ To generate the PHPDoc :
 user@host doctrine-entities$ ./tools/phpdocumentor --config ./ci/phpdoc.xml
 ```
 The generated HTML documentation will be in `./ci/phpdoc/`.
+
+
+## Standard
+
+All PHP files in this project follows [PSR-12](https://www.php-fig.org/psr/psr-12/).
+To indent the code :
+```shellsession
+user@host resto-api$ ./tools/phpcbf --standard=PSR12 --extensions=php --ignore=*/Kernel.php -p ./src/ ./tests/
+```
