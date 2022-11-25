@@ -151,7 +151,7 @@ user@host doctrine-entities$ ./tools/psalm -c ./ci/psalm.xml [--report=./psalm/p
 Use "--report=./psalm/psalm.txt --output-format=text"
 if you want the output in a file instead of on screen.
 
-## PHPDoc
+### PHPDoc
 
 To generate the PHPDoc :
 ```shellsession
