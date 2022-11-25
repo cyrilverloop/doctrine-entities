@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Slug trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Slug
+ * @group slug
  */
 final class SlugTest extends TestCase
 {

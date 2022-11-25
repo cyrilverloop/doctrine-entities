@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Priority trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Priority
+ * @group priority
  */
 final class PriorityTest extends TestCase
 {

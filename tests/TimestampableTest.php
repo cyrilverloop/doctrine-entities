@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Timestampable trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Timestampable
+ * @group timestampable
  */
 final class TimestampableTest extends TestCase
 {

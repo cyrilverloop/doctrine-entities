@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the ConnectedAt trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Timestampable\ConnectedAt
+ * @group connectedAt
  */
 final class ConnectedAtTest extends TestCase
 {

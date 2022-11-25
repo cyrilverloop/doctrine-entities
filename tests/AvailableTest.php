@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Available trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Available
+ * @group available
  */
 final class AvailableTest extends TestCase
 {

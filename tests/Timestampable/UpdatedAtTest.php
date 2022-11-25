@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the UpdatedAt trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Timestampable\UpdatedAt
+ * @group updatedAt
  */
 final class UpdatedAtTest extends TestCase
 {

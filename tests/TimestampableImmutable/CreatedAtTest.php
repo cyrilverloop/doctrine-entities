@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the CreatedAt trait.
  *
  * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\CreatedAt
+ * @group createdAtImmutable
  */
 final class CreatedAtTest extends TestCase
 {
