@@ -165,5 +165,5 @@ The generated HTML documentation will be in `./ci/phpdoc/`.
 All PHP files in this project follows [PSR-12](https://www.php-fig.org/psr/psr-12/).
 To indent the code :
 ```shellsession
-user@host doctrine-entities$ ./tools/phpcbf --standard=PSR12 --extensions=php --ignore=*/Kernel.php -p ./src/ ./tests/
+user@host doctrine-entities$ ./tools/phpcbf --standard=PSR12 --extensions=php -p ./src/ ./tests/
 ```
