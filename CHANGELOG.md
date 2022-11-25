@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Phpcbf.
 - Test groups.
 
+### Changed
+- Documentation for continuous integration.
+
 ## [6.0.0] - 2022-10-05
 ### Changed
 - Properties are back to protected.

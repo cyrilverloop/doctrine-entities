@@ -34,7 +34,7 @@ user@host ~$ cd [PATH_WHERE_TO_PUT_THE_PROJECT] # E.g. ~/projects/
 user@host projects$ git clone https://github.com/cyrilverloop/doctrine-entities.git
 user@host projects$ cd doctrine-entities
 user@host doctrine-entities$ composer install -o
-user@host doctrine-entities$ phive install
+user@host doctrine-entities$ phive install --trust-gpg-keys 4AA394086372C20A,12CE0F1D262429A5,31C7E470E2138192,67F861C3D889C656,C5095986493B4AA0
 ```
 
 
@@ -124,27 +124,26 @@ class Product
 ```
 
 
-## Development
+## Continuous integration
 
-You can install development tools through Phive :
-```shellsession
-user@host doctrine-entities$ phive install
-```
+### Tests
 
-## PHPUnit
-
-To execute tests :
+To run the tests :
 ```shellsession
 user@host doctrine-entities$ ./tools/phpunit -c ./ci/phpunit.xml
 ```
-The generated coverage report will be in `./ci/phpunit/`.
+The generated outputs will be in `./ci/phpunit/`.
+Look at `./ci/phpunit/html/index.html` for code coverage
+and `./ci/phpunit/testdox.html` for a verbose list of passing / failing tests.
 
-## Psalm
+### Static analysis
 
-To verify the code with Psalm :
+To do a static analysis :
 ```shellsession
-user@host doctrine-entities$ ./tools/psalm -c ./ci/psalm.xml
+user@host doctrine-entities$ ./tools/psalm -c ./ci/psalm.xml [--report=./psalm/psalm.txt --output-format=text]
 ```
+Use "--report=./psalm/psalm.txt --output-format=text"
+if you want the output in a file instead of on screen.
 
 ## PHPDoc
 
@@ -155,10 +154,10 @@ user@host doctrine-entities$ ./tools/phpdocumentor --config ./ci/phpdoc.xml
 The generated HTML documentation will be in `./ci/phpdoc/`.
 
 
-## Standard
+### Standard
 
 All PHP files in this project follows [PSR-12](https://www.php-fig.org/psr/psr-12/).
 To indent the code :
 ```shellsession
-user@host resto-api$ ./tools/phpcbf --standard=PSR12 --extensions=php --ignore=*/Kernel.php -p ./src/ ./tests/
+user@host doctrine-entities$ ./tools/phpcbf --standard=PSR12 --extensions=php --ignore=*/Kernel.php -p ./src/ ./tests/
 ```
