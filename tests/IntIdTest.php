@@ -5,28 +5,27 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests;
 
 use CyrilVerloop\DoctrineEntities\IntId;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the IntId abstract entity.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\IntId
- * @covers ::__construct
- * @group intId
  */
+#[
+    PA\CoversClass(IntId::class),
+    PA\Group('intId')
+]
 final class IntIdTest extends TestCase
 {
     // Methods :
 
     /**
      * Tests that the method can return the identifier/primary key.
-     *
-     * @covers ::getId
      */
     public function testCanGetId(): void
     {
         $intId = $this->getMockForAbstractClass(IntId::class);
 
-        self::assertSame(null, $intId->getId(), 'The IDs must be the same.');
+        self::assertNull($intId->getId(), 'The IDs must be the same.');
     }
 }

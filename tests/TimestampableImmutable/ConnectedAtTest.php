@@ -5,23 +5,22 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests\TimestampableImmutable;
 
 use CyrilVerloop\DoctrineEntities\TimestampableImmutable\ConnectedAt;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the ConnectedAt trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\ConnectedAt
- * @group connectedAtImmutable
  */
+#[
+    PA\CoversClass(ConnectedAt::class),
+    PA\Group('connectedAtImmutable')
+]
 final class ConnectedAtTest extends TestCase
 {
     // Methods :
 
     /**
      * Test that the connection date and time can be accessed.
-     *
-     * @covers ::setConnectedAt
-     * @covers ::getConnectedAt
      */
     public function testCanSetAndGetConnectedAt(): void
     {

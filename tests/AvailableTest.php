@@ -5,14 +5,16 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests;
 
 use CyrilVerloop\DoctrineEntities\Available;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Available trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Available
- * @group available
  */
+#[
+    PA\CoversClass(Available::class),
+    PA\Group('available')
+]
 final class AvailableTest extends TestCase
 {
     // Methods :
@@ -21,22 +23,22 @@ final class AvailableTest extends TestCase
      * Returns availabilities.
      * @return mixed[] availabilities.
      */
-    public function getAvailable(): array
+    public static function getAvailable(): array
     {
         return [
-            'when it is not available.' => [false],
-            'when it is available.' => [true]
+            'not available.' => [false],
+            'available.' => [true]
         ];
     }
 
     /**
      * Test that the availability can be accessed.
      * @param bool $available the availability.
-     *
-     * @covers ::setAvailable
-     * @covers ::isAvailable
-     * @dataProvider getAvailable
      */
+    #[
+        PA\DataProvider('getAvailable'),
+        PA\TestDox('Can set and get availability when it is $_dataName')
+    ]
     public function testCanSetAndGetAvailability(bool $available): void
     {
         $availableTrait = $this->getMockForTrait(Available::class);

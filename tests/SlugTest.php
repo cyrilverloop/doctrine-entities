@@ -5,23 +5,22 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests;
 
 use CyrilVerloop\DoctrineEntities\Slug;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Slug trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Slug
- * @group slug
  */
+#[
+    PA\CoversClass(Slug::class),
+    PA\Group('slug')
+]
 final class SlugTest extends TestCase
 {
     // Methods :
 
     /**
      * Tests slug can be accessed.
-     *
-     * @covers ::setSlug
-     * @covers ::getSlug
      */
     public function testCanSetAndGetSlug(): void
     {

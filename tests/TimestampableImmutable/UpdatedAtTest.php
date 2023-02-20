@@ -5,23 +5,22 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests\TimestampableImmutable;
 
 use CyrilVerloop\DoctrineEntities\TimestampableImmutable\UpdatedAt;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the UpdatedAt trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\TimestampableImmutable\UpdatedAt
- * @group updatedAtImmutable
  */
+#[
+    PA\CoversClass(UpdatedAt::class),
+    PA\Group('updatedAtImmutable')
+]
 final class UpdatedAtTest extends TestCase
 {
     // Methods :
 
     /**
      * Test that the update date and time can be accessed.
-     *
-     * @covers ::setUpdatedAt
-     * @covers ::getUpdatedAt
      */
     public function testCanSetAndGetUpdatedAt(): void
     {

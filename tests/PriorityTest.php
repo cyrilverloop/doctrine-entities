@@ -5,23 +5,22 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests;
 
 use CyrilVerloop\DoctrineEntities\Priority;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Priority trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Priority
- * @group priority
  */
+#[
+    PA\CoversClass(Priority::class),
+    PA\Group('priority')
+]
 final class PriorityTest extends TestCase
 {
     // Methods :
 
     /**
      * Tests priority can be accessed.
-     *
-     * @covers ::setPriority
-     * @covers ::getPriority
      */
     public function testCanSetAndGetPriority(): void
     {

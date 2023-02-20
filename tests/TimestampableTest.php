@@ -5,23 +5,26 @@ declare(strict_types=1);
 namespace CyrilVerloop\DoctrineEntities\Tests;
 
 use CyrilVerloop\DoctrineEntities\Timestampable;
+use CyrilVerloop\DoctrineEntities\Timestampable\CreatedAt;
+use CyrilVerloop\DoctrineEntities\Timestampable\UpdatedAt;
+use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Tests the Timestampable trait.
- *
- * @coversDefaultClass \CyrilVerloop\DoctrineEntities\Timestampable
- * @group timestampable
  */
+#[
+    PA\CoversClass(Timestampable::class),
+    PA\UsesClass(CreatedAt::class),
+    PA\UsesClass(UpdatedAt::class),
+    PA\Group('timestampable')
+]
 final class TimestampableTest extends TestCase
 {
     // Methods :
 
     /**
      * Test that the creation date and time can be accessed.
-     *
-     * @covers ::setCreatedAt
-     * @covers ::getCreatedAt
      */
     public function testCanSetAndGetCreatedAt(): void
     {
@@ -39,9 +42,6 @@ final class TimestampableTest extends TestCase
 
     /**
      * Test that the update date and time can be accessed.
-     *
-     * @covers ::setUpdatedAt
-     * @covers ::getUpdatedAt
      */
     public function testCanSetAndGetUpdatedAt(): void
     {
