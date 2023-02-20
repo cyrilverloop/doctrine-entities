@@ -26,8 +26,8 @@ final class AvailableTest extends TestCase
     public static function getAvailable(): array
     {
         return [
-            'not available.' => [false],
-            'available.' => [true]
+            'not available' => [false],
+            'available' => [true]
         ];
     }
 
@@ -37,7 +37,7 @@ final class AvailableTest extends TestCase
      */
     #[
         PA\DataProvider('getAvailable'),
-        PA\TestDox('Can set and get availability when it is $_dataName')
+        PA\TestDox('Can set and get availability when it is $_dataName.')
     ]
     public function testCanSetAndGetAvailability(bool $available): void
     {
