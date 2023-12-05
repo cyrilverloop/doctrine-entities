@@ -1,6 +1,6 @@
 {
     "name": "cyril-verloop/doctrine-entities",
-    "description": "Some default doctrine entity/fields requiring PHP 8.1+ and Doctrine 2.13+.",
+    "description": "Some default doctrine entity/fields requiring PHP 8.1+ and Doctrine 2.15+.",
     "type": "library",
     "license": "MIT",
     "autoload": {
