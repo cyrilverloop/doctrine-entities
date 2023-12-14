@@ -1,6 +1,6 @@
 # doctrine-entities
 
-Some default doctrine entity/fields requiring PHP 8.1+ and Doctrine 2.13+.
+Some default doctrine entity/fields requiring PHP 8.1+ and Doctrine ORM >=2.15 <2.17.
 
 This includes :
 

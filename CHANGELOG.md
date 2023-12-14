@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Documentation for continuous integration.
 
+### Fixed
+- Limiting Doctrine ORM version to <2.17 for PHP 8.1 compatibility.
+
 ## [6.0.0] - 2022-10-05
 ### Changed
 - Properties are back to protected.
