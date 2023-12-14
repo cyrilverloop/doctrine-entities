@@ -10,6 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+
     - name: Validate composer.json and composer.lock
       run: composer validate
 
@@ -55,6 +60,11 @@ jobs:
     - name: Untar project.
       run:  tar -xf project.tar
 
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+
     - name: Run php lint
       run: find ./src/ ./tests/ -type f -name '*.php' -print0 | xargs -0 -n1 -P4 php -l -n | (! grep -v "No syntax errors detected" )
 
@@ -69,6 +79,11 @@ jobs:
 
     - name: Untar project.
       run:  tar -xf project.tar
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
 
     - name: Run phpcs
       run: ./tools/phpcs --standard=PSR12 --extensions=php ./src/ ./tests/
@@ -105,6 +120,11 @@ jobs:
 
     - name: Untar project.
       run:  tar -xf project.tar
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
 
     - name: Run Psalm
       run: ./tools/psalm -c ./ci/psalm.xml --shepherd --no-cache
