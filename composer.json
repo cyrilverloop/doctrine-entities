@@ -15,7 +15,7 @@
     },
     "require": {
         "php": ">=8.2",
-        "doctrine/orm": "^2.17"
+        "doctrine/orm": "^2.17 || ^3.0"
     },
     "authors": [
         {
