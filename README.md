@@ -69,8 +69,11 @@ You need to copy the `<field />` fields you require in your XML files.
 For example :
 ```xml
 <field name="connectedAt" column="connected_at" type="datetime" nullable="true" />
+<field name="connectedAt" column="connected_at" type="datetime_immutable" nullable="true" />
 <field name="createdAt" column="created_at" type="datetime" />
+<field name="createdAt" column="created_at" type="datetime_immutable" />
 <field name="updatedAt" column="updated_at" type="datetime" nullable="true" />
+<field name="updatedAt" column="updated_at" type="datetime_immutable" nullable="true" />
 <field name="available" column="available" type="boolean" />
 <field name="priority" column="priority" type="smallint">
     <options>
