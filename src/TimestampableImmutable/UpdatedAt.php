@@ -17,7 +17,7 @@ trait UpdatedAt
     /**
      * @var null|\DateTimeImmutable the date and time of the update.
      *
-     * @ORM\Column(type="datetime", name="updated_at", nullable=true)
+     * @ORM\Column(type="datetime_immutable", name="updated_at", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIME_IMMUTABLE, name: "updated_at", nullable: true)]
     protected ?\DateTimeImmutable $updatedAt;

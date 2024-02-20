@@ -17,7 +17,7 @@ trait ConnectedAt
     /**
      * @var null|\DateTimeImmutable the date and time of the connection.
      *
-     * @ORM\Column(type="datetime", name="connected_at", nullable=true)
+     * @ORM\Column(type="datetime_immutable", name="connected_at", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIME_IMMUTABLE, name: "connected_at", nullable: true)]
     protected ?\DateTimeImmutable $connectedAt;
