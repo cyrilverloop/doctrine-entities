@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -27,7 +28,7 @@ abstract class IntId
     #[
         ORM\Id,
         ORM\Column(
-            type: "integer",
+            type: Types::INTEGER,
             options: ["unsigned" => true]
         ),
         ORM\GeneratedValue(strategy: "AUTO")

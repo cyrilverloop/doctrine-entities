@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,7 +19,7 @@ trait Available
      *
      * @ORM\Column(type="boolean")
      */
-    #[ORM\Column(type: "boolean")]
+    #[ORM\Column(type: Types::BOOLEAN)]
     protected bool $available;
 
 

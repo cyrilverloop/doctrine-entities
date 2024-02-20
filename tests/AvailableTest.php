@@ -21,6 +21,7 @@ final class AvailableTest extends TestCase
 
     /**
      * Returns availabilities.
+     *
      * @return mixed[] availabilities.
      */
     public static function getAvailable(): array
@@ -33,6 +34,7 @@ final class AvailableTest extends TestCase
 
     /**
      * Test that the availability can be accessed.
+     *
      * @param bool $available the availability.
      */
     #[

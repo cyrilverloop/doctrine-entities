@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities\Timestampable;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,7 +19,7 @@ trait CreatedAt
      *
      * @ORM\Column(type="datetime", name="created_at")
      */
-    #[ORM\Column(type: "datetime", name: "created_at")]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, name: "created_at")]
     protected \DateTime $createdAt;
 
 

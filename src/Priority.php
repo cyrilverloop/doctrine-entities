@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,7 +26,7 @@ trait Priority
      */
     #[
         ORM\Column(
-            type: "smallint",
+            type: Types::SMALLINT,
             options: [
                 "default" => 0
             ]

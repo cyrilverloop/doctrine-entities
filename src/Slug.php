@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,7 +19,7 @@ trait Slug
      *
      * @ORM\Column(type="string", nullable=true)
      */
-    #[ORM\Column(type: "string", nullable: true)]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     protected ?string $slug;
 
 

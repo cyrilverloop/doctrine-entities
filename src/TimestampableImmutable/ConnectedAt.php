@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyrilVerloop\DoctrineEntities\TimestampableImmutable;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,7 +19,7 @@ trait ConnectedAt
      *
      * @ORM\Column(type="datetime", name="connected_at", nullable=true)
      */
-    #[ORM\Column(type: "datetime_immutable", name: "connected_at", nullable: true)]
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE, name: "connected_at", nullable: true)]
     protected ?\DateTimeImmutable $connectedAt;
 
 
