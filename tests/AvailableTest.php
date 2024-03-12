@@ -47,12 +47,12 @@ final class AvailableTest extends TestCase
             use Available;
         };
 
-        $availableTrait->setAvailable($available);
+            $availableTrait->setAvailable($available);
 
-        self::assertSame(
-            $available,
-            $availableTrait->isAvailable(),
-            'The availability must be the same.'
-        );
+            self::assertSame(
+                $available,
+                $availableTrait->isAvailable(),
+                'The availability must be the same.'
+            );
     }
 }
