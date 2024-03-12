@@ -28,7 +28,9 @@ final class TimestampableTest extends TestCase
      */
     public function testCanSetAndGetCreatedAt(): void
     {
-        $timestampable = $this->getMockForTrait(Timestampable::class);
+        $timestampable = new class {
+            use Timestampable;
+        };
         $datetime = new \DateTime('2021-01-01 00:00:00.0');
 
         $timestampable->setCreatedAt($datetime);
@@ -45,7 +47,9 @@ final class TimestampableTest extends TestCase
      */
     public function testCanSetAndGetUpdatedAt(): void
     {
-        $timestampable = $this->getMockForTrait(Timestampable::class);
+        $timestampable = new class {
+            use Timestampable;
+        };
         $datetime = new \DateTime('2021-01-01 00:00:00.0');
 
         $timestampable->setUpdatedAt($datetime);

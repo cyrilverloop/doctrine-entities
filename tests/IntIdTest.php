@@ -24,7 +24,7 @@ final class IntIdTest extends TestCase
      */
     public function testCanGetId(): void
     {
-        $intId = $this->getMockForAbstractClass(IntId::class);
+        $intId = new class extends IntId {};
 
         self::assertNull($intId->getId(), 'The IDs must be the same.');
     }

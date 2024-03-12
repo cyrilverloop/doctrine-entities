@@ -24,7 +24,9 @@ final class UpdatedAtTest extends TestCase
      */
     public function testCanSetAndGetUpdatedAt(): void
     {
-        $updatedAt = $this->getMockForTrait(UpdatedAt::class);
+        $updatedAt = new class {
+            use UpdatedAt;
+        };
         $datetime = new \DateTimeImmutable('2021-01-01 00:00:00.0');
 
         $updatedAt->setUpdatedAt($datetime);

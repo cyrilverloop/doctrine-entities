@@ -43,7 +43,9 @@ final class AvailableTest extends TestCase
     ]
     public function testCanSetAndGetAvailability(bool $available): void
     {
-        $availableTrait = $this->getMockForTrait(Available::class);
+        $availableTrait = new class {
+            use Available;
+        };
 
         $availableTrait->setAvailable($available);
 

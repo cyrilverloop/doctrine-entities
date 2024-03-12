@@ -24,7 +24,9 @@ final class ConnectedAtTest extends TestCase
      */
     public function testCanSetAndGetConnectedAt(): void
     {
-        $connectedAt = $this->getMockForTrait(ConnectedAt::class);
+        $connectedAt = new class {
+            use ConnectedAt;
+        };
         $datetime = new \DateTimeImmutable('2021-01-01 00:00:00.0');
 
         $connectedAt->setConnectedAt($datetime);

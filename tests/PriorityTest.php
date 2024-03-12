@@ -24,7 +24,9 @@ final class PriorityTest extends TestCase
      */
     public function testCanSetAndGetPriority(): void
     {
-        $priorityTrait = $this->getMockForTrait(Priority::class);
+        $priorityTrait = new class {
+            use Priority;
+        };
         $priority = 1;
 
         $priorityTrait->setPriority($priority);

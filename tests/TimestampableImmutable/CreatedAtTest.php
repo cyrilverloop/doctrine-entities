@@ -24,7 +24,9 @@ final class CreatedAtTest extends TestCase
      */
     public function testCanSetAndGetCreatedAt(): void
     {
-        $createdAt = $this->getMockForTrait(CreatedAt::class);
+        $createdAt = new class {
+            use CreatedAt;
+        };
         $datetime = new \DateTimeImmutable('2021-01-01 00:00:00.0');
 
         $createdAt->setCreatedAt($datetime);

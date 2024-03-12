@@ -24,7 +24,9 @@ final class SlugTest extends TestCase
      */
     public function testCanSetAndGetSlug(): void
     {
-        $slugTrait = $this->getMockForTrait(Slug::class);
+        $slugTrait = new class {
+            use Slug;
+        };
         $slug = 'test-slug';
 
         $slugTrait->setSlug($slug);
