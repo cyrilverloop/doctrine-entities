@@ -3,6 +3,7 @@
 Some default doctrine entity/fields requiring PHP >=8.2 and Doctrine ORM >=2.17.
 
 For compatibility with PHP <8.2 and Doctrine ORM <2.17, see version <7.0 of this software.
+For compatibility with Doctrine ORM <3.2 , see version <8.0 of this software.
 
 This includes :
 
