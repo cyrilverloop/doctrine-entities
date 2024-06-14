@@ -14,9 +14,9 @@ use PHPUnit\Framework\TestCase;
  * Tests the TimestampableImmutable trait.
  */
 #[
-    PA\CoversClass(TimestampableImmutable::class),
-    PA\UsesClass(CreatedAt::class),
-    PA\UsesClass(UpdatedAt::class),
+    PA\CoversTrait(TimestampableImmutable::class),
+    PA\UsesTrait(CreatedAt::class),
+    PA\UsesTrait(UpdatedAt::class),
     PA\Group('timestampableImmutable')
 ]
 final class TimestampableImmutableTest extends TestCase

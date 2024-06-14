@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the UpdatedAt trait.
  */
 #[
-    PA\CoversClass(UpdatedAt::class),
+    PA\CoversTrait(UpdatedAt::class),
     PA\Group('updatedAt')
 ]
 final class UpdatedAtTest extends TestCase

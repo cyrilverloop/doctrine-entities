@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Slug trait.
  */
 #[
-    PA\CoversClass(Slug::class),
+    PA\CoversTrait(Slug::class),
     PA\Group('slug')
 ]
 final class SlugTest extends TestCase

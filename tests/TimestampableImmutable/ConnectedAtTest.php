@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the ConnectedAt trait.
  */
 #[
-    PA\CoversClass(ConnectedAt::class),
+    PA\CoversTrait(ConnectedAt::class),
     PA\Group('connectedAtImmutable')
 ]
 final class ConnectedAtTest extends TestCase

@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Available trait.
  */
 #[
-    PA\CoversClass(Available::class),
+    PA\CoversTrait(Available::class),
     PA\Group('available')
 ]
 final class AvailableTest extends TestCase

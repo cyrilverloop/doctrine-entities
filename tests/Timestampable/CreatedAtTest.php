@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the CreatedAt trait.
  */
 #[
-    PA\CoversClass(CreatedAt::class),
+    PA\CoversTrait(CreatedAt::class),
     PA\Group('createdAt')
 ]
 final class CreatedAtTest extends TestCase

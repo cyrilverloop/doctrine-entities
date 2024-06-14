@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests the Priority trait.
  */
 #[
-    PA\CoversClass(Priority::class),
+    PA\CoversTrait(Priority::class),
     PA\Group('priority')
 ]
 final class PriorityTest extends TestCase
