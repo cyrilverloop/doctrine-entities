@@ -9,10 +9,10 @@ use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests the IntId abstract entity.
+ * Tests the IntId trait.
  */
 #[
-    PA\CoversClass(IntId::class),
+    PA\CoversTrait(IntId::class),
     PA\Group('intId')
 ]
 final class IntIdTest extends TestCase
@@ -20,13 +20,36 @@ final class IntIdTest extends TestCase
     // Methods :
 
     /**
-     * Tests that the method can return the identifier/primary key.
+     * Tests can access a null id.
      */
-    public function testCanGetId(): void
+    public function testCanGetANullId(): void
     {
-        $intId = new class extends IntId {
+        $intIdTrait = new class {
+            use IntId;
+
+            public function __construct()
+            {
+                $this->id = null;
+            }
         };
 
-        self::assertNull($intId->getId(), 'The IDs must be the same.');
+        self::assertNull($intIdTrait->getId(), 'The ID must be null.');
+    }
+
+    /**
+     * Tests can access an integer id.
+     */
+    public function testCanGetAIntegerId(): void
+    {
+        $intIdTrait = new class {
+            use IntId;
+
+            public function __construct()
+            {
+                $this->id = 5;
+            }
+        };
+
+        self::assertSame(5, $intIdTrait->getId(), 'The ID must be null.');
     }
 }

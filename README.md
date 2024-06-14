@@ -1,13 +1,13 @@
 # doctrine-entities
 
-Some default doctrine entity/fields requiring PHP >=8.2 and Doctrine ORM >=2.17.
+Some default doctrine entity/fields requiring PHP >=8.2 and Doctrine ORM >=3.2.
 
 For compatibility with PHP <8.2 and Doctrine ORM <2.17, see version <7.0 of this software.
 For compatibility with Doctrine ORM <3.2 , see version <8.0 of this software.
 
 This includes :
 
-- `IntId` : an abstract class with an `$id` as an integer identifier/primary key;
+- `IntId` : a trait that adds an `$id` as an integer identifier/primary key;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
 - `Slug` : a trait that adds a `$slug` string field;
@@ -45,30 +45,16 @@ user@host doctrine-entities$ phive install --trust-gpg-keys 4AA394086372C20A,12C
 
 There are annotations, attributes and XML mappings. For XML mappings, read below.
 
-### Entity
-
-The XML file is located in the `config/doctrine/` directory.
-You just have to copy or reference it depending on your needs.
-If you use Symfony, the XML file just needs to be referenced in the `resources/config/packages/doctrine.yaml` file :
-
-```yaml
-doctrine:
-    orm:
-        entity_managers:
-            app: # your project name.
-                mappings:
-                    CyrilVerloop\DoctrineEntities:
-                        type: xml
-                        dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
-                        prefix: CyrilVerloop\DoctrineEntities
-```
-
-### Traits
-
-You need to copy the `<field />` fields you require in your XML files.
+You need to copy the require configuration in your XML file.
 
 For example :
 ```xml
+<id name="id" type="integer">
+    <generator strategy="AUTO" />
+    <options>
+        <option name="unsigned">true</option>
+    </options>
+</id>
 <field name="connectedAt" column="connected_at" type="datetime" nullable="true" />
 <field name="connectedAt" column="connected_at" type="datetime_immutable" nullable="true" />
 <field name="createdAt" column="created_at" type="datetime" />
@@ -90,8 +76,13 @@ You can also look at the `resources/mappings/Example.orm.xml` file.
 
 ### IntId
 
+**In version <8.0, this was an abstract class.**
+Due to uncertain support of
+[https://github.com/doctrine/orm/issues/11488](multiple inheritance mapped superclasses in different namespaces),
+this is now a trait.
+
 If your entities need an integer as an identifier/primary key,
-they can extend the mapped super class `CyrilVerloop\DoctrineEntities\IntId`.
+they can use the `CyrilVerloop\DoctrineEntities\IntId` trait.
 
 ```php
 <?php
@@ -102,9 +93,15 @@ namespace MyNamespace;
 
 use CyrilVerloop\DoctrineEntities\IntId;
 
-class Product extends IntId
+class Product
 {
-    // Your code here.
+    use IntId;
+
+    public function __construct()
+    {
+        // Do not forget to initiate the id :
+        $this->id = null;
+    }
 }
 ```
 

@@ -8,13 +8,10 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * A base entity with an int
+ * Trait that adds an integer 'id'
  * as identifier/primary key.
- *
- * @ORM\MappedSuperclass
  */
-#[ORM\MappedSuperclass]
-abstract class IntId
+trait IntId
 {
     // Properties :
 
@@ -34,17 +31,6 @@ abstract class IntId
         ORM\GeneratedValue(strategy: "AUTO")
     ]
     protected ?int $id;
-
-
-    // Magic methods :
-
-    /**
-     * The constructor.
-     */
-    public function __construct()
-    {
-        $this->id = null;
-    }
 
 
     // Accessors :
