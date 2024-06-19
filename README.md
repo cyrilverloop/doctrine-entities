@@ -2,12 +2,13 @@
 
 Some default doctrine entity/fields requiring PHP >=8.2 and Doctrine ORM >=3.2.
 
-For compatibility with PHP <8.2 and Doctrine ORM <2.17, see version <7.0 of this software.
 For compatibility with Doctrine ORM <3.2 , see version <8.0 of this software.
 
 This includes :
 
+- `AbstractIntId` : a mapped superclass with an `$id` as an integer identifier/primary key;
 - `IntId` : a trait that adds an `$id` as an integer identifier/primary key;
+- `IntIdInterface` : an interface for integer id;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
 - `Slug` : a trait that adds a `$slug` string field;
@@ -45,6 +46,26 @@ user@host doctrine-entities$ phive install --trust-gpg-keys 4AA394086372C20A,12C
 
 There are annotations, attributes and XML mappings. For XML mappings, read below.
 
+### Entity
+
+The XML file is located in the `config/doctrine/` directory.
+You just have to copy or reference it depending on your needs.
+If you use Symfony, the XML file just needs to be referenced in the `resources/config/packages/doctrine.yaml` file :
+
+```yaml
+doctrine:
+    orm:
+        entity_managers:
+            app: # your project name.
+                mappings:
+                    CyrilVerloop\DoctrineEntities:
+                        type: xml
+                        dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
+                        prefix: CyrilVerloop\DoctrineEntities
+```
+
+### Traits
+
 You need to copy the require configuration in your XML file.
 
 For example :
@@ -74,15 +95,32 @@ You can also look at the `resources/mappings/Example.orm.xml` file.
 
 ## Usage
 
-### IntId
+### AbstractIntId / IntId / IntIdInterface
 
-**In version <8.0, this was an abstract class.**
+**In version <8.0, `IntId` was an abstract class.**
 Due to uncertain support of
-[https://github.com/doctrine/orm/issues/11488](multiple inheritance mapped superclasses in different namespaces),
+[multiple inheritance mapped superclasses in different namespaces](https://github.com/doctrine/orm/issues/11488),
 this is now a trait.
 
-If your entities need an integer as an identifier/primary key,
-they can use the `CyrilVerloop\DoctrineEntities\IntId` trait.
+If your entities need an integer as an identifier/primary key :
+- they can extend the mapped super class `CyrilVerloop\DoctrineEntities\AbstractIntId`
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace MyNamespace;
+
+use CyrilVerloop\DoctrineEntities\AbstractIntId;
+
+class Product extends AbstractIntId
+{
+    // Your code here.
+}
+```
+
+- use the `CyrilVerloop\DoctrineEntities\IntId` trait
 
 ```php
 <?php
@@ -102,6 +140,23 @@ class Product
         // Do not forget to initiate the id :
         $this->id = null;
     }
+}
+```
+
+- implement the `CyrilVerloop\DoctrineEntities\IntIdInterface` interface
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace MyNamespace;
+
+use CyrilVerloop\DoctrineEntities\IntIdInterface;
+
+class Product implements IntIdInterface
+{
+    // Your code here.
 }
 ```
 
