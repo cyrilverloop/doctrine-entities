@@ -8,7 +8,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Trait that adds an integer 'id'
+ * A trait that adds an integer 'id'
  * as identifier/primary key.
  */
 trait IntId
