@@ -9,6 +9,7 @@ This includes :
 - `AbstractIntId` : a mapped superclass with an `$id` as an integer identifier/primary key;
 - `IntId` : a trait that adds an `$id` as an integer identifier/primary key;
 - `IntIdInterface` : an interface for integer id;
+- `Active` : a trait that adds an `$active` boolean field;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
 - `Slug` : a trait that adds a `$slug` string field;
@@ -82,6 +83,7 @@ For example :
 <field name="createdAt" column="created_at" type="datetime_immutable" />
 <field name="updatedAt" column="updated_at" type="datetime" nullable="true" />
 <field name="updatedAt" column="updated_at" type="datetime_immutable" nullable="true" />
+<field name="active" column="active" type="boolean" />
 <field name="available" column="available" type="boolean" />
 <field name="priority" column="priority" type="smallint">
     <options>
@@ -160,7 +162,7 @@ class Product implements IntIdInterface
 }
 ```
 
-### Available / Priority / Slug / Timestampable ...
+### Active / Available / Priority / Slug / Timestampable ...
 
 If your entities need some other fields, they can use a trait.
 
