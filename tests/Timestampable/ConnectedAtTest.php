@@ -33,8 +33,7 @@ final class ConnectedAtTest extends TestCase
 
         self::assertSame(
             $datetime,
-            $connectedAt->getConnectedAt(),
-            'The date and time must be the same.'
+            $connectedAt->getConnectedAt()
         );
     }
 }

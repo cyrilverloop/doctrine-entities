@@ -33,7 +33,7 @@ final class IntIdTest extends TestCase
             }
         };
 
-        self::assertNull($intIdTrait->getId(), 'The ID must be null.');
+        self::assertNull($intIdTrait->getId());
     }
 
     /**
@@ -50,6 +50,6 @@ final class IntIdTest extends TestCase
             }
         };
 
-        self::assertSame(5, $intIdTrait->getId(), 'The ID must be null.');
+        self::assertSame(5, $intIdTrait->getId());
     }
 }

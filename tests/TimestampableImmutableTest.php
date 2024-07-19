@@ -37,8 +37,7 @@ final class TimestampableImmutableTest extends TestCase
 
         self::assertSame(
             $datetime,
-            $timestampable->getCreatedAt(),
-            'The date and time must be the same.'
+            $timestampable->getCreatedAt()
         );
     }
 
@@ -56,8 +55,7 @@ final class TimestampableImmutableTest extends TestCase
 
         self::assertEquals(
             $datetime,
-            $timestampable->getUpdatedAt(),
-            'The date and time must be the same.'
+            $timestampable->getUpdatedAt()
         );
     }
 }

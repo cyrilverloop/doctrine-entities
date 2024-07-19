@@ -33,8 +33,7 @@ final class CreatedAtTest extends TestCase
 
         self::assertSame(
             $datetime,
-            $createdAt->getCreatedAt(),
-            'The date and time must be the same.'
+            $createdAt->getCreatedAt()
         );
     }
 }

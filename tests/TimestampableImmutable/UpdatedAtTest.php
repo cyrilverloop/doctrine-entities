@@ -33,8 +33,7 @@ final class UpdatedAtTest extends TestCase
 
         self::assertEquals(
             $datetime,
-            $updatedAt->getUpdatedAt(),
-            'The date and time must be the same.'
+            $updatedAt->getUpdatedAt()
         );
     }
 }

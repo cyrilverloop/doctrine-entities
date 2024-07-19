@@ -20,39 +20,41 @@ final class AvailableTest extends TestCase
     // Methods :
 
     /**
-     * Returns availabilities.
-     *
-     * @return mixed[] availabilities.
+     * Test that the available state can be accessed.
      */
-    public static function getAvailable(): array
-    {
-        return [
-            'not available' => [false],
-            'available' => [true]
-        ];
-    }
-
-    /**
-     * Test that the availability can be accessed.
-     *
-     * @param bool $available the availability.
-     */
-    #[
-        PA\DataProvider('getAvailable'),
-        PA\TestDox('Can set and get availability when it is $_dataName.')
-    ]
-    public function testCanSetAndGetAvailability(bool $available): void
+    public function testCanSetAndGetAnAvailableState(): void
     {
         $availableTrait = new class {
             use Available;
+
+            public function __construct()
+            {
+                $this->available = false;
+            }
         };
 
-            $availableTrait->setAvailable($available);
+        $availableTrait->setAvailable(true);
 
-            self::assertSame(
-                $available,
-                $availableTrait->isAvailable(),
-                'The availability must be the same.'
-            );
+        self::assertTrue($availableTrait->isAvailable());
+    }
+
+
+    /**
+     * Test that the unavailable state can be accessed.
+     */
+    public function testCanSetAndGetAnUnavailableState(): void
+    {
+        $availableTrait = new class {
+            use Available;
+
+            public function __construct()
+            {
+                $this->available = true;
+            }
+        };
+
+        $availableTrait->setAvailable(false);
+
+        self::assertFalse($availableTrait->isAvailable());
     }
 }

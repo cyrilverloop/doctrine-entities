@@ -20,39 +20,41 @@ final class ActiveTest extends TestCase
     // Methods :
 
     /**
-     * Returns active states.
-     *
-     * @return mixed[] active states.
-     */
-    public static function getActive(): array
-    {
-        return [
-            'not active' => [false],
-            'active' => [true]
-        ];
-    }
-
-    /**
      * Test that the active state can be accessed.
-     *
-     * @param bool $active the active state.
      */
-    #[
-        PA\DataProvider('getActive'),
-        PA\TestDox('Can set and get active state when it is $_dataName.')
-    ]
-    public function testCanSetAndGetActiveState(bool $active): void
+    public function testCanSetAndGetAnActiveState(): void
     {
         $activeTrait = new class {
             use Active;
+
+            public function __construct()
+            {
+                $this->active = false;
+            }
         };
 
-            $activeTrait->setActive($active);
+        $activeTrait->setActive(true);
 
-            self::assertSame(
-                $active,
-                $activeTrait->isActive(),
-                'The active state must be the same.'
-            );
+        self::assertTrue($activeTrait->isActive());
+    }
+
+
+    /**
+     * Test that the inactive state can be accessed.
+     */
+    public function testCanSetAndGetAnInactiveState(): void
+    {
+        $activeTrait = new class {
+            use Active;
+
+            public function __construct()
+            {
+                $this->active = true;
+            }
+        };
+
+        $activeTrait->setActive(false);
+
+        self::assertFalse($activeTrait->isActive());
     }
 }

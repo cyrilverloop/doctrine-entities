@@ -20,21 +20,40 @@ final class PriorityTest extends TestCase
     // Methods :
 
     /**
-     * Tests priority can be accessed.
+     * Tests a positive priority can be accessed.
      */
-    public function testCanSetAndGetPriority(): void
+    public function testCanSetAndGetAPositivePriority(): void
     {
         $priorityTrait = new class {
             use Priority;
+
+            public function __construct()
+            {
+                $this->priority = 0;
+            }
         };
-        $priority = 1;
 
-        $priorityTrait->setPriority($priority);
+        $priorityTrait->setPriority(1);
 
-        self::assertSame(
-            $priority,
-            $priorityTrait->getPriority(),
-            'The priority must be the same.'
-        );
+        self::assertSame(1, $priorityTrait->getPriority());
+    }
+
+    /**
+     * Tests a negative priority can be accessed.
+     */
+    public function testCanSetAndGetANegativePriority(): void
+    {
+        $priorityTrait = new class {
+            use Priority;
+
+            public function __construct()
+            {
+                $this->priority = 0;
+            }
+        };
+
+        $priorityTrait->setPriority(-2);
+
+        self::assertSame(-2, $priorityTrait->getPriority());
     }
 }
