@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - test nullable value for `Slug`.
 - `Name` trait.
+- `Description` trait.
 
 ### Changed
 - `Slug` is now declared as a "text" field and not a "string".
