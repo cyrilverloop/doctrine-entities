@@ -25,5 +25,6 @@
             </options>
         </field>
         <field name="slug" column="slug" type="text" nullable="true" />
+        <field name="name" column="name" type="text" />
     </entity>
 </doctrine-mapping>
