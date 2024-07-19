@@ -20,21 +20,44 @@ final class SlugTest extends TestCase
     // Methods :
 
     /**
-     * Tests slug can be accessed.
+     * Tests a slug can be accessed.
      */
-    public function testCanSetAndGetSlug(): void
+    public function testCanSetAndGetASlug(): void
     {
         $slugTrait = new class {
             use Slug;
-        };
-        $slug = 'test-slug';
 
-        $slugTrait->setSlug($slug);
+            public function __construct()
+            {
+                $this->slug = null;
+            }
+        };
+
+        $slugTrait->setSlug('test-slug');
 
         self::assertSame(
-            $slug,
-            $slugTrait->getSlug(),
-            'The slug must be the same.'
+            'test-slug',
+            $slugTrait->getSlug()
         );
+    }
+
+
+    /**
+     * Tests a null slug can be accessed.
+     */
+    public function testCanSetAndGetANullSlug(): void
+    {
+        $slugTrait = new class {
+            use Slug;
+
+            public function __construct()
+            {
+                $this->slug = 'test-slug';
+            }
+        };
+
+        $slugTrait->setSlug(null);
+
+        self::assertNull($slugTrait->getSlug());
     }
 }
