@@ -12,7 +12,9 @@ This includes :
 - `Active` : a trait that adds an `$active` boolean field;
 - `Available` : a trait that adds an `$available` boolean field;
 - `Priority` : a trait that adds a `$priority` integer field;
-- `Slug` : a trait that adds a `$slug` string field;
+- `Slug` : a trait that adds a `$slug` text field;
+- `Name` : a trait that adds a `$name` text field;
+- `Description` : a trait that adds a `$description` text field;
 - `ConnectedAt` : two traits that add a `$connectedAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `CreatedAt` : two traits that add a `$createdAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `UpdatedAt` : two traits that add a `$updatedAt` field (choose between \DateTime() or \DateTimeImmutable()).
@@ -90,7 +92,9 @@ For example :
         <option name="default">0</option>
     </options>
 </field>
-<field name="slug" column="slug" type="string" nullable="true" />
+<field name="slug" column="slug" type="text" nullable="true" />
+<field name="name" column="name" type="text" />
+<field name="description" column="description" type="text" nullable="true" />
 ```
 
 You can also look at the `resources/mappings/Example.orm.xml` file.
