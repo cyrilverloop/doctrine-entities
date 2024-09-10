@@ -15,6 +15,7 @@ This includes :
 - `Slug` : a trait that adds a `$slug` text field;
 - `Name` : a trait that adds a `$name` text field;
 - `Description` : a trait that adds a `$description` text field;
+- `NullableDescription` : a trait that adds a nullable `$description` text field;
 - `ConnectedAt` : two traits that add a `$connectedAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `CreatedAt` : two traits that add a `$createdAt` field (choose between \DateTime() or \DateTimeImmutable());
 - `UpdatedAt` : two traits that add a `$updatedAt` field (choose between \DateTime() or \DateTimeImmutable()).
@@ -95,6 +96,7 @@ For example :
 <field name="slug" column="slug" type="text" nullable="true" />
 <field name="name" column="name" type="text" />
 <field name="description" column="description" type="text" />
+<field name="description" column="description" type="text" nullable="true" />
 ```
 
 You can also look at the `resources/mappings/Example.orm.xml` file.

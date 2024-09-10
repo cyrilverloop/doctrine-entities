@@ -27,5 +27,6 @@
         <field name="slug" column="slug" type="text" nullable="true" />
         <field name="name" column="name" type="text" />
         <field name="description" column="description" type="text" />
+        <field name="description" column="description" type="text" nullable="true" />
     </entity>
 </doctrine-mapping>
