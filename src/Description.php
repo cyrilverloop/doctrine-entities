@@ -15,21 +15,21 @@ trait Description
     // Properties :
 
     /**
-     * @var null|string the description.
+     * @var string the description.
      *
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text")
      */
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    protected ?string $description;
+    #[ORM\Column(type: Types::TEXT)]
+    protected string $description;
 
 
     // Accessors :
 
     /**
      * Returns the description.
-     * @return null|string the description.
+     * @return string the description.
      */
-    public function getDescription(): ?string
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -39,9 +39,9 @@ trait Description
 
     /**
      * Changes the description.
-     * @param null|string $description the description.
+     * @param string $description the description.
      */
-    public function setDescription(?string $description): void
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }

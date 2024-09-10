@@ -94,7 +94,7 @@ For example :
 </field>
 <field name="slug" column="slug" type="text" nullable="true" />
 <field name="name" column="name" type="text" />
-<field name="description" column="description" type="text" nullable="true" />
+<field name="description" column="description" type="text" />
 ```
 
 You can also look at the `resources/mappings/Example.orm.xml` file.

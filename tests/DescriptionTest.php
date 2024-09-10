@@ -29,7 +29,7 @@ final class DescriptionTest extends TestCase
 
             public function __construct()
             {
-                $this->description = null;
+                $this->description = '';
             }
         };
 
@@ -39,25 +39,5 @@ final class DescriptionTest extends TestCase
             'test-description',
             $descriptionTrait->getDescription()
         );
-    }
-
-
-    /**
-     * Tests a null description can be accessed.
-     */
-    public function testCanSetAndGetANullDescription(): void
-    {
-        $descriptionTrait = new class {
-            use Description;
-
-            public function __construct()
-            {
-                $this->description = 'test-description';
-            }
-        };
-
-        $descriptionTrait->setDescription(null);
-
-        self::assertNull($descriptionTrait->getDescription());
     }
 }
