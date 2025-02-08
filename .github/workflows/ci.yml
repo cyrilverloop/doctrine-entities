@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   install:
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/checkout@v4
@@ -13,7 +13,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.4'
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -50,7 +50,7 @@ jobs:
 
   phplint:
     needs: install
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/download-artifact@v4
@@ -63,14 +63,14 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.4'
 
     - name: Run php lint
       run: find ./src/ ./tests/ -type f -name '*.php' -print0 | xargs -0 -n1 -P4 php -l -n | (! grep -v "No syntax errors detected" )
 
   phpcs:
     needs: phplint
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/download-artifact@v4
@@ -83,14 +83,14 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.4'
 
     - name: Run phpcs
       run: ./tools/phpcs --standard=PSR12 --extensions=php ./src/ ./tests/
 
   test:
     needs: phplint
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/download-artifact@v4
@@ -103,7 +103,7 @@ jobs:
     - name: Setup PHP with Xdebug
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.4'
         coverage: xdebug
 
     - name: Run PHPUnit test
@@ -111,7 +111,7 @@ jobs:
 
   static-analysis:
     needs: phplint
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/download-artifact@v4
@@ -124,7 +124,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.4'
 
     - name: Run Psalm
       run: ./tools/psalm -c ./ci/psalm.xml --shepherd --no-cache
