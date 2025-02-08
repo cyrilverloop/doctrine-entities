@@ -11,6 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
  * as identifier/primary key.
  *
  * @ORM\MappedSuperclass
+ *
+ * @psalm-api
  */
 #[ORM\MappedSuperclass]
 abstract class AbstractIntId implements IntIdInterface

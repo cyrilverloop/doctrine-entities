@@ -6,6 +6,8 @@ namespace CyrilVerloop\DoctrineEntities;
 
 /**
  * An interface for integer id.
+ *
+ * @psalm-api
  */
 interface IntIdInterface
 {
