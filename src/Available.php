@@ -16,8 +16,6 @@ trait Available
 
     /**
      * @var bool true if available, else false.
-     *
-     * @ORM\Column(type="boolean")
      */
     #[ORM\Column(type: Types::BOOLEAN)]
     protected bool $available;

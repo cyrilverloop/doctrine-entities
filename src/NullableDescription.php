@@ -16,8 +16,6 @@ trait NullableDescription
 
     /**
      * @var null|string the description.
-     *
-     * @ORM\Column(type="text", nullable=true)
      */
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     protected ?string $description;

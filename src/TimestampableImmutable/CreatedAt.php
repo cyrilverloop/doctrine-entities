@@ -16,8 +16,6 @@ trait CreatedAt
 
     /**
      * @var \DateTimeImmutable the date and time of the creation.
-     *
-     * @ORM\Column(type="datetime_immutable", name="created_at")
      */
     #[ORM\Column(type: Types::DATETIME_IMMUTABLE, name: "created_at")]
     protected \DateTimeImmutable $createdAt;

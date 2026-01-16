@@ -48,7 +48,7 @@ user@host doctrine-entities$ phive install --trust-gpg-keys 4AA394086372C20A,12C
 
 ## Mappings
 
-There are annotations, attributes and XML mappings. For XML mappings, read below.
+There are attributes and XML mappings. For XML mappings, read below.
 
 ### Entity
 

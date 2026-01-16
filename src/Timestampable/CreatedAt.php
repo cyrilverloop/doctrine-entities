@@ -16,8 +16,6 @@ trait CreatedAt
 
     /**
      * @var \DateTime the date and time of the creation.
-     *
-     * @ORM\Column(type="datetime", name="created_at")
      */
     #[ORM\Column(type: Types::DATETIME_MUTABLE, name: "created_at")]
     protected \DateTime $createdAt;

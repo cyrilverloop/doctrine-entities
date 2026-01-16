@@ -16,8 +16,6 @@ trait ConnectedAt
 
     /**
      * @var null|\DateTime the date and time of the connection.
-     *
-     * @ORM\Column(type="datetime", name="connected_at", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIME_MUTABLE, name: "connected_at", nullable: true)]
     protected ?\DateTime $connectedAt;

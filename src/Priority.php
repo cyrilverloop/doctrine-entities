@@ -16,13 +16,6 @@ trait Priority
 
     /**
      * @var int the priority.
-     *
-     * @ORM\Column(
-     *     type="smallint",
-     *     options={
-     *         "default": 0
-     *     }
-     * )
      */
     #[
         ORM\Column(

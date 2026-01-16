@@ -10,8 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  * A mapped superclass with an int
  * as identifier/primary key.
  *
- * @ORM\MappedSuperclass
- *
  * @psalm-api
  */
 #[ORM\MappedSuperclass]

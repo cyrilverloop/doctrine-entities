@@ -16,8 +16,6 @@ trait Slug
 
     /**
      * @var null|string the slug.
-     *
-     * @ORM\Column(type="text", nullable=true)
      */
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     protected ?string $slug;

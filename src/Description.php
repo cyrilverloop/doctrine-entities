@@ -16,8 +16,6 @@ trait Description
 
     /**
      * @var string the description.
-     *
-     * @ORM\Column(type="text")
      */
     #[ORM\Column(type: Types::TEXT)]
     protected string $description;

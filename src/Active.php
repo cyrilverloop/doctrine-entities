@@ -16,8 +16,6 @@ trait Active
 
     /**
      * @var bool true if active, else false.
-     *
-     * @ORM\Column(type="boolean")
      */
     #[ORM\Column(type: Types::BOOLEAN)]
     protected bool $active;
