@@ -1,9 +1,16 @@
 doctrine:
     orm:
-        entity_managers:
-            app:
-                mappings:
-                    CyrilVerloop\DoctrineEntities:
-                        type: xml
-                        dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
-                        prefix: CyrilVerloop\DoctrineEntities
+        mappings:
+            # For attribute :
+            CVDE:
+                alias: CVDE
+                dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/src'
+                prefix: 'CyrilVerloop\DoctrineEntities'
+                type: attribute
+
+            # For XML :
+            CVDE:
+                alias: CVDE
+                dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
+                prefix: CyrilVerloop\DoctrineEntities
+                type: xml

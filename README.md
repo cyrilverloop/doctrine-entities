@@ -48,27 +48,42 @@ user@host doctrine-entities$ phive install --trust-gpg-keys 4AA394086372C20A,12C
 
 ## Mappings
 
-There are attributes and XML mappings. For XML mappings, read below.
+There are attributes and XML mappings.
 
-### Entity
+### Symfony
 
-The XML file is located in the `config/doctrine/` directory.
-You just have to copy or reference it depending on your needs.
-If you use Symfony, the XML file just needs to be referenced in the `resources/config/packages/doctrine.yaml` file :
+To you use with Symfony, copy the attribute or XML configuration below
+and add it to the `config/packages/doctrine.yaml` file of your project.
 
 ```yaml
 doctrine:
     orm:
-        entity_managers:
-            app: # your project name.
-                mappings:
-                    CyrilVerloop\DoctrineEntities:
-                        type: xml
-                        dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
-                        prefix: CyrilVerloop\DoctrineEntities
+        mappings:
+            # For attribute :
+            CVDE:
+                alias: CVDE
+                dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/src'
+                prefix: 'CyrilVerloop\DoctrineEntities'
+                type: attribute
+
+            # For XML :
+            CVDE:
+                alias: CVDE
+                dir: '%kernel.project_dir%/vendor/cyril-verloop/doctrine-entities/config/doctrine'
+                prefix: CyrilVerloop\DoctrineEntities
+                type: xml
 ```
 
-### Traits
+You can also look at the `resources/config/packages/doctrine.yaml` file.
+
+### XML
+
+#### Entity
+
+The XML file is located in the `config/doctrine/` directory.
+You just have to copy or reference it depending on your needs.
+
+#### Traits
 
 You need to copy the require configuration in your XML file.
 
@@ -104,11 +119,6 @@ You can also look at the `resources/mappings/Example.orm.xml` file.
 ## Usage
 
 ### AbstractIntId / IntId / IntIdInterface
-
-**In version <8.0, `IntId` was an abstract class.**
-Due to uncertain support of
-[multiple inheritance mapped superclasses in different namespaces](https://github.com/doctrine/orm/issues/11488),
-this is now a trait.
 
 If your entities need an integer as an identifier/primary key :
 - they can extend the mapped super class `CyrilVerloop\DoctrineEntities\AbstractIntId`
